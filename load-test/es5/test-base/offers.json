@@ -1,0 +1,45 @@
+{
+  "recommendationOffers": [
+    "a497c5e5-a8eb-4a13-91a7-709e4b644fa3",
+    "d90e1053-63b2-4edd-8f22-d7b2f9f504dd"
+  ],
+  "broadcastOffers": [
+    "e411c43d-68a7-4250-a98e-501b80ea8fbc",
+    "44ef259b-46ac-480d-ab0a-f5cb4a1dc4a1",
+    "a53d0d2c-8500-42fa-857c-8a8a2a2f175b",
+    "edc2d8c1-6120-4912-99ee-52cfe22b9552"
+  ],
+  "categoryOffers": [
+    "80a3f7d2-aefb-4f5e-951c-bd8ada62a132",
+    "a5685503-27c1-4e32-a676-7d4a502e7802",
+    "b0183767-3830-4312-b306-b278584c076e",
+    "50d7f9a2-1aeb-4770-80ed-825881a46c34",
+    "4933c45a-7cc2-46fc-88dc-841e47ef6e6d",
+    "0be340b2-20b4-4ae6-9667-59000c28760c"
+  ],
+  "channelsOffer": [
+    "c7cc6c5b-2fbf-4938-984c-e81b644a1ff7",
+    "069ec593-f83d-4b3b-8bcf-53758b948502"
+  ],
+  "externalTitleOffers": [
+    "c017b314-d7b8-4a7a-a399-aa28876bc8e5",
+    "64c80920-6c23-47e9-b606-5fc444b99c80"
+  ],
+  "titleOffers": [
+    "853f480f-70cd-4afa-bbda-0653104b50a4",
+    "4a65be9e-e223-4413-9d18-bb6bea31e4aa",
+    "84b0ba5e-b543-432d-9e9f-019f5ae99862",
+    "9683b23c-9154-4738-acfc-cdf9e8eec94f",
+    "54c4b659-43f8-40ac-bfa7-abf7650e5341",
+    "27bba94c-4a52-414d-aab7-49c36f4b3f41"
+  ],
+  "videoOffers": [
+    "897c0c7a-5b81-487c-b6b1-2226a4ea5579",
+    "ba77f81e-9149-431f-ad0e-eab7974889fd",
+    "8bc7412e-85aa-4eb0-8f39-ae07bcb7aac1",
+    "252b4e90-3040-49b4-aecb-849b7a270add",
+    "e0325108-f181-4772-b698-04f8e3f64c9a",
+    "78395a2a-e45c-4753-9ed7-ef275753c5c3",
+    "0397f604-590f-428c-ad9d-1fde0be7e5a9"
+  ]
+}

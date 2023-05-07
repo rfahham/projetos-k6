@@ -1,0 +1,112 @@
+K6 Cloud
+
+Na AWS em SP
+
+AMI do k6 que o tarcisio criou foi ami-08787f32793058081
+
+Subir as instâncias na AWS (Terraform)
+
+Instalar o k6 nas instâncias (Ansible)
+
+
+
+
+Dar permissão restrita para o ssh.pem
+sudo chmod 600 ssh.pem
+
+
+Subir o projeto para a vm na AWS
+$ go run main.go -update_statics true
+
+
+
+Verificar se o script foi enviado para a vms na AWS
+$ ssh -i ssh.pem ubuntu@54.207.176.233 bash
+
+ls k6/scripts    
+
+get.js
+post.js
+
+
+
+
+Visualizar resultados:
+
+cat output/data/* | jq '.metrics | {"p95": .http_req_duration.values."p(95)", "rate": .iterations.values.rate, "failed_rate": .http_req_failed.values.rate}'
+
+
+
+
+
+
+
+
+$ ssh -i ssh.pem ubuntu@18.228.232.148 python3 ips_micro.py
+
+$ ssh -i ssh.pem ubuntu@18.228.232.148 python3 scalling.py 1
+
+$ ssh -i ssh.pem ubuntu@18.228.232.148 python3 ips.py
+
+
+Listar os IPS que estão UP na AWS
+$ ssh -i ssh.pem ubuntu@18.228.232.148 python3 ips_micro.py
+
+Subir instâncias na AWS - modelo t2_micro
+ssh -i ssh.pem ubuntu@18.228.232.148 python3 scaling_micro.py 1
+
+Subir instâncias na AWS - modelo t
+ssh -i ssh.pem ubuntu@18.228.232.148 python3 scaling.py 0
+
+
+
+
+ssh -i ssh.pem ubuntu@18.228.232.148 python3 ips.py
+
+
+
+Converter o script.js de Ecma 6 para Ecma Script 5
+
+https://babeljs.io/
+
+
+DE
+
+import http froms 'k6/http';
+import { sleep } from 'k6';
+
+export default function () {
+  http.get('https://test.k6.io');
+  sleep(1);
+}
+
+PARA
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = _default;
+
+var _http = _interopRequireDefault(require("k6/http"));
+
+var _k = require("k6");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _default() {
+  _http.default.get('https://test.k6.io');
+
+  (0, _k.sleep)(1);
+}
+
+https://babeljs.io/repl#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&corejs=3.6&spec=false&loose=false&code_lz=JYWwDg9gTgLgBACxjMcBmUIjgcgNYBsA9EijgNwBQokscA3nAM4A2Apm6gL7qbb4EKlSmwAeteAGMIAOybwIYGMFlM4AXgaU4OuADcArkwBccAIwAGADTbdAEwNQAhstmmcAZgtMcNnVyoRcWh4OzY0JwMWeDQDGUlXGTgACgBKLR1SMAA6AHM2GGScLJMiIhg2eWzCbJUcVKodVg4wZLMGyi4gA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=false&presets=env%2Ctypescript&prettier=false&targets=&version=7.20.4&externalPlugins=&assumptions=%7B%7D
+
+para executar o teste
+
+$ ./bin/osx-inte;/k6ssh <nome do script.js>
+
+
+$ go run main.go -script <nome do script.js>
+
