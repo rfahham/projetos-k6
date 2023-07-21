@@ -3,6 +3,11 @@
 import { check } from 'k6';
 import http from 'k6/http';
 
+export const options = {
+  vus: 10,
+  duration: '30s',
+};
+
 const domain = 'https://test.k6.io';
 
 export default function () {
