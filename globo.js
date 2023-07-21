@@ -1,20 +1,16 @@
-import { sleep } from 'k6'
-import http from 'k6/http'
+import http from 'k6/http';
+import { check, sleep } from 'k6';
 
 export const options = {
-      stages: [
-        { target: 10, duration: '10s' },
-        { target: 50, duration: '10s' },
-        { target: 0, duration: '10s' },
-      ]
-}
+  stages: [
+    { duration: '10s', target: 10 },
+    { duration: '10s', target: 20 },
+    { duration: '10s', target: 0 },
+  ],
+};
 
-export function stages() {
-  let response
-
-  // home globo.com
-  response = http.get('https://www.globo.com/')
-
-  // Automatically added sleep
-  sleep(1)
+export default function () {
+  const res = http.get('https://www.globo.com/');
+  check(res, { 'status was 200': (r) => r.status == 200 });
+  sleep(1);
 }
