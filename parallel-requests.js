@@ -17,10 +17,16 @@ export default function () {
         ['GET', domain + '/static/js/prisms.js'],
         ['GET', domain + '/static/favicon.ico']
     ])
+
+    // console.log('/', responses[0].status)
+    // console.log('/static/css/site.css', responses[1].status)
+    // console.log('/static/js/prisms.js', responses[2].status)
+    // console.log('/static/favicon.ico', responses[3].status)
+    
   check(responses[0], {
     'Homepage successfully loaded': (r) => r.body.includes("Collection of simple web-pages suitable for load testing"),
   });
+  
 }
-
 
 // https://github.com/grafana/k6-learn/blob/main/Modules/III-k6-Intermediate/05-Parallel-requests-in-k6.md
