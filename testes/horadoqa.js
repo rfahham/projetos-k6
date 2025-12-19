@@ -10,5 +10,8 @@ export const options = {
   };
 export default function () {
 	const res = http.get('https://www.horadoqa.com.br/');
-	// console.log(res.status)
+	console.log('Response time was ' + String(res.timings.duration) + ' ms');
+    console.log('Response size: ' + String(res.body.length) + ' bytes');
+    console.log('Status code was ' + String(res.status));
+    console.log('-----------------------------------');
 };

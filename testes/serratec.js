@@ -12,5 +12,8 @@ export const options = {
 export default function () {
 	const res = http.get('https://serratec.org/');
     check(res, { 'status was 200': (r) => r.status == 200 });
-	// console.log(res.status)
+	console.log('Response time was ' + String(res.timings.duration) + ' ms');
+    console.log('Response size: ' + String(res.body.length) + ' bytes');
+    console.log('Status code was ' + String(res.status));
+    console.log('-----------------------------------');
 };
