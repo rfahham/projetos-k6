@@ -18,8 +18,8 @@ function getVUCount(percentage) {
 }
 
 const VU_PERCENTAGE = {
-    cenario1: 0.2,
-    cenario2: 0.8,
+    cenario1: 0.3,
+    cenario2: 0.7,
 
 }
 

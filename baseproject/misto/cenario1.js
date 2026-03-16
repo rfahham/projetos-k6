@@ -10,7 +10,7 @@ export let options = {
 };
 
 export default function () {
-  let res = http.get('https://workon.apps.tsuru.gcp.i.globo/');
+  let res = http.get('https://globo.com/');
   check(res, { 'status was 200': (r) => r.status == 200 });
   sleep(0.1); 
 }
